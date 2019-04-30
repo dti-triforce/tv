@@ -6,79 +6,43 @@
 
     <meta http-Equiv="Pragma" Content="no-cache" />
 
-    <meta http-Equiv="Expires" Content="0" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta http-Equiv="Expires" Content="0" />
 
 	<script>
+        var urls = {
+            bandeira: "https://dti-triforce.github.io/tv/flag.html",
+            aniversariantes: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQe43-lEjz2TfVwlL8O9jMUyvQVNIWTaxxtv2D-alBhai1pqV-ixRkVDQu2FLJUNNUvX6a0R9CatHFF/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false",
+            retrospectiva: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQFIcfuXi18v526AersDxVGtkKjGepVGh0kzTVMvSlEY17uRMN3sDKffvwO9yiWRsdmFuLDCLVaKr_y/pubhtml?gid=1695479590&single=true",
+            personalidades: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRtugSMfNvhfIByU09QhBk7j1yE-yYZIpT1m2rmh9eCS49DAwzMMwulKGkZFmj08_gUIehnYecGj0pv/pubhtml?gid=372509587&single=true",
+            ressarcimentoNumerario: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRMm217jl4oc1aPw-YZiwEv2VdVOjHw_gW_X4PgLBn9MwHadlWkbvqVud-N7lBk_YtG96HlejBOqbA2/pubhtml?gid=1515838713&amp;single=true&amp;widget=true&amp;headers=false",
+            prevencaoFraude: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTfiQB1so5tvAm6JKN620cD5tVAJZmo0Utiu6LkksBzIPzhJZzR3HCBX75apt3E2KkmF7DFEFA2vjVV/pubhtml?gid=1515838713&single=true",
+            performanceTol: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsXzikemvYc_fhg7Afx32_TwsR2Ub8ZYMKmhP4AwjLukW2uFUQdZvBar2Vz9iAHEwHZhBn-3Uw1eJV/pubhtml?gid=1515838713&single=true",
+            cashManagement: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRu_41exEr7S-cNeQq9Ik55VfSh2c_u52aQDvJAALeUNQoijBHOznLlPaVF-xsSgrJhth-pjIRrQDq-/pubhtml?gid=1515838713&single=true",
+            ignition: "https://docs.google.com/spreadsheets/d/e/2PACX-1vS5JfznQSIOBh9hfj3tDH21fEqZoODiO0g-f0vmwsh8ARyBVT1RT8m3yPIntRtC2Cb1_otNVrz6SlE-/pubhtml?gid=0&single=true",
+            gestaoVista: "https://docs.google.com/spreadsheets/d/19ZBFnBBTBPInGoXyVf2ImRm4d9IUYv_h2jELR1jTKfA/pubhtml?gid=372201115&single=true&amp;widget=true&amp;headers=false",
+            aderenciaOperacional: "https://docs.google.com/spreadsheets/d/19ZBFnBBTBPInGoXyVf2ImRm4d9IUYv_h2jELR1jTKfA/pubhtml?gid=1299658999&single=true&amp;widget=true&amp;headers=false",
+            squadEmpresarial: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQg7SrCqIob5VTjzV1s-A-WWx7ShbKHc7WmsshIBklH1RRYuou12u207vzyGSq8gw8OwRfsOTPOmtnS/pubhtml?gid=1515838713&single=true"
+        };
 
-	var urls = [
-	"https://dti-triforce.github.io/tv/flag.html",
-	"https://docs.google.com/spreadsheets/d/e/2PACX-1vQe43-lEjz2TfVwlL8O9jMUyvQVNIWTaxxtv2D-alBhai1pqV-ixRkVDQu2FLJUNNUvX6a0R9CatHFF/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false",
-	"https://docs.google.com/spreadsheets/d/e/2PACX-1vQFIcfuXi18v526AersDxVGtkKjGepVGh0kzTVMvSlEY17uRMN3sDKffvwO9yiWRsdmFuLDCLVaKr_y/pubhtml?gid=1695479590&single=true",
-	"https://docs.google.com/spreadsheets/d/e/2PACX-1vRtugSMfNvhfIByU09QhBk7j1yE-yYZIpT1m2rmh9eCS49DAwzMMwulKGkZFmj08_gUIehnYecGj0pv/pubhtml?gid=372509587&single=true",
-	"https://docs.google.com/spreadsheets/d/e/2PACX-1vRMm217jl4oc1aPw-YZiwEv2VdVOjHw_gW_X4PgLBn9MwHadlWkbvqVud-N7lBk_YtG96HlejBOqbA2/pubhtml?gid=1515838713&amp;single=true&amp;widget=true&amp;headers=false",
-	"https://docs.google.com/spreadsheets/d/e/2PACX-1vTfiQB1so5tvAm6JKN620cD5tVAJZmo0Utiu6LkksBzIPzhJZzR3HCBX75apt3E2KkmF7DFEFA2vjVV/pubhtml?gid=1515838713&single=true",
-	"https://docs.google.com/spreadsheets/d/e/2PACX-1vTsXzikemvYc_fhg7Afx32_TwsR2Ub8ZYMKmhP4AwjLukW2uFUQdZvBar2Vz9iAHEwHZhBn-3Uw1eJV/pubhtml?gid=1515838713&single=true",
-	"https://docs.google.com/spreadsheets/d/e/2PACX-1vRu_41exEr7S-cNeQq9Ik55VfSh2c_u52aQDvJAALeUNQoijBHOznLlPaVF-xsSgrJhth-pjIRrQDq-/pubhtml?gid=1515838713&single=true",
-	"https://docs.google.com/spreadsheets/d/e/2PACX-1vS5JfznQSIOBh9hfj3tDH21fEqZoODiO0g-f0vmwsh8ARyBVT1RT8m3yPIntRtC2Cb1_otNVrz6SlE-/pubhtml?gid=0&single=true",		
-	"https://docs.google.com/spreadsheets/d/19ZBFnBBTBPInGoXyVf2ImRm4d9IUYv_h2jELR1jTKfA/pubhtml?gid=372201115&single=true&amp;widget=true&amp;headers=false",
-	"https://docs.google.com/spreadsheets/d/19ZBFnBBTBPInGoXyVf2ImRm4d9IUYv_h2jELR1jTKfA/pubhtml?gid=1299658999&single=true&amp;widget=true&amp;headers=false",
-	"https://docs.google.com/spreadsheets/d/e/2PACX-1vQg7SrCqIob5VTjzV1s-A-WWx7ShbKHc7WmsshIBklH1RRYuou12u207vzyGSq8gw8OwRfsOTPOmtnS/pubhtml?gid=1515838713&single=true"
-		
-	];
-
-	var i = 0;
-
-
-
-	function redirect_url(){
-
-		if( i < urls.length ){
-
-			setTimeout(function(){
-
-				if (i > 0) {
-					$('iframe').attr('src', urls[i] + "&refresh="+(new Date()));
-				}
-				else {
-					$('iframe').attr('src', urls[i]);
-				}
-
-				i++;
-
-				var frameElement = document.getElementById("frame");
-
-				frameElement.contentWindow.location.href = frameElement.src;
-
-				redirect_url();
-
-			}, 12000);
-
-		}
-
-		else
-
-		{
-
-			i=0;
-
-			redirect_url();
-
-		}
-
-	}
-
-
-
-	redirect_url();
-
-</script>
-
+        (function() {
+            var i = 0;
+            var quantidadeUrls = Object.keys(urls).length;
+            setInterval(function() {
+                if (i === quantidadeUrls) {
+                    i = 0;
+                }
+                var postFix = i > 0 ? '&refresh=' + (new Date()) : '';
+                var key = Object.keys(urls)[i];
+                var src = urls[key] + postFix;
+                document.getElementById('frame').setAttribute('src', src);
+                ++i;
+            }, 10000)
+        })();
+    </script>
 </head>
 
 <body style="overflow: hidden">
 
-<iframe id = "frame" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:10px;right:0px;bottom:0px" height="100%" width="100%" align="center"></iframe>
+<iframe id="frame" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:10px;right:0px;bottom:0px" height="100%" width="100%" align="center"></iframe>
 
 </body>
