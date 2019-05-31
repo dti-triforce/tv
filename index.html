@@ -1,50 +1,66 @@
 <html>
-
-<head>
-
-	<meta http-Equiv="Cache-Control" Content="no-cache" />
+  <head>
+    <meta http-Equiv="Cache-Control" Content="no-cache" />
 
     <meta http-Equiv="Pragma" Content="no-cache" />
 
-	<meta http-Equiv="Expires" Content="0" />
+    <meta http-Equiv="Expires" Content="0" />
 
-	<script>
-        var urls = {
-            bandeira: "https://dti-triforce.github.io/tv/flag.html",
-            aniversariantes: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQe43-lEjz2TfVwlL8O9jMUyvQVNIWTaxxtv2D-alBhai1pqV-ixRkVDQu2FLJUNNUvX6a0R9CatHFF/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false",
-            retrospectiva: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQFIcfuXi18v526AersDxVGtkKjGepVGh0kzTVMvSlEY17uRMN3sDKffvwO9yiWRsdmFuLDCLVaKr_y/pubhtml?gid=1695479590&single=true",
-            personalidades: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRtugSMfNvhfIByU09QhBk7j1yE-yYZIpT1m2rmh9eCS49DAwzMMwulKGkZFmj08_gUIehnYecGj0pv/pubhtml?gid=372509587&single=true",
-            ressarcimentoNumerario: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRMm217jl4oc1aPw-YZiwEv2VdVOjHw_gW_X4PgLBn9MwHadlWkbvqVud-N7lBk_YtG96HlejBOqbA2/pubhtml?gid=1515838713&amp;single=true&amp;widget=true&amp;headers=false",
-            prevencaoFraude: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRNzyb97dOS0E1i4kCMo1uWDJ3VdPfDBJBNiKxfnLsOm7uh4s_vpF3-yjlxmJxv41xK4CDA-obIoXyd/pubhtml?gid=1515838713&single=true",
-            performanceTol: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsXzikemvYc_fhg7Afx32_TwsR2Ub8ZYMKmhP4AwjLukW2uFUQdZvBar2Vz9iAHEwHZhBn-3Uw1eJV/pubhtml?gid=1515838713&single=true",
-            cashManagement: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT3843rTWVhhFE9JL5ynUe44whuRYlb5PLy6PJNde31qdRbZaPqkqSoTrp_o5TjUkkYbvdP3-nD1A7E/pubhtml?gid=1515838713&single=true",
-            squadEmpresarial: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRm3SsdjWtQmY_JkwgGHnsF_AfwBcYY6VRdWRtZasXstxqaG6mEigK8idsEh1yG1Z4yPlDmWCH3AbMw/pubhtml?gid=1515838713&single=true",
-            squadEmbossing: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdzEdp_j5l-RQWvo7ZKQFa4cWJIU7VHzuc0NfltW-zNqoG5J1mRHvlMbGOUkZGtFahLMJDZy-S5S4X/pubhtml?gid=1515838713&single=true",
-            ignition: "https://docs.google.com/spreadsheets/d/e/2PACX-1vS5JfznQSIOBh9hfj3tDH21fEqZoODiO0g-f0vmwsh8ARyBVT1RT8m3yPIntRtC2Cb1_otNVrz6SlE-/pubhtml?gid=0&single=true",
-            gestaoVista: "https://docs.google.com/spreadsheets/d/19ZBFnBBTBPInGoXyVf2ImRm4d9IUYv_h2jELR1jTKfA/pubhtml?gid=372201115&single=true&amp;widget=true&amp;headers=false",
-            aderenciaOperacional: "https://docs.google.com/spreadsheets/d/19ZBFnBBTBPInGoXyVf2ImRm4d9IUYv_h2jELR1jTKfA/pubhtml?gid=1299658999&single=true&amp;widget=true&amp;headers=false"
-            
-	};
+    <script>
+      var urls = {
+        bandeira: 'https://dti-triforce.github.io/tv/flag.html',
+        aniversariantes:
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vQe43-lEjz2TfVwlL8O9jMUyvQVNIWTaxxtv2D-alBhai1pqV-ixRkVDQu2FLJUNNUvX6a0R9CatHFF/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false',
+        retrospectiva:
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vQFIcfuXi18v526AersDxVGtkKjGepVGh0kzTVMvSlEY17uRMN3sDKffvwO9yiWRsdmFuLDCLVaKr_y/pubhtml?gid=1695479590&single=true',
+        personalidades:
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtugSMfNvhfIByU09QhBk7j1yE-yYZIpT1m2rmh9eCS49DAwzMMwulKGkZFmj08_gUIehnYecGj0pv/pubhtml?gid=372509587&single=true',
+        ressarcimentoNumerario:
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMm217jl4oc1aPw-YZiwEv2VdVOjHw_gW_X4PgLBn9MwHadlWkbvqVud-N7lBk_YtG96HlejBOqbA2/pubhtml?gid=1515838713&amp;single=true&amp;widget=true&amp;headers=false',
+        prevencaoFraude:
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vRNzyb97dOS0E1i4kCMo1uWDJ3VdPfDBJBNiKxfnLsOm7uh4s_vpF3-yjlxmJxv41xK4CDA-obIoXyd/pubhtml?gid=1515838713&single=true',
+        performanceTol:
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vTsXzikemvYc_fhg7Afx32_TwsR2Ub8ZYMKmhP4AwjLukW2uFUQdZvBar2Vz9iAHEwHZhBn-3Uw1eJV/pubhtml?gid=1515838713&single=true',
+        cashManagement:
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vT3843rTWVhhFE9JL5ynUe44whuRYlb5PLy6PJNde31qdRbZaPqkqSoTrp_o5TjUkkYbvdP3-nD1A7E/pubhtml?gid=1515838713&single=true',
+        squadEmpresarial:
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vRm3SsdjWtQmY_JkwgGHnsF_AfwBcYY6VRdWRtZasXstxqaG6mEigK8idsEh1yG1Z4yPlDmWCH3AbMw/pubhtml?gid=1515838713&single=true',
+        squadEmbossing:
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vQdzEdp_j5l-RQWvo7ZKQFa4cWJIU7VHzuc0NfltW-zNqoG5J1mRHvlMbGOUkZGtFahLMJDZy-S5S4X/pubhtml?gid=1515838713&single=true',
+        ignition:
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vS5JfznQSIOBh9hfj3tDH21fEqZoODiO0g-f0vmwsh8ARyBVT1RT8m3yPIntRtC2Cb1_otNVrz6SlE-/pubhtml?gid=0&single=true',
+        gestaoVista:
+          'https://docs.google.com/spreadsheets/d/19ZBFnBBTBPInGoXyVf2ImRm4d9IUYv_h2jELR1jTKfA/pubhtml?gid=372201115&single=true&amp;widget=true&amp;headers=false',
+        aderenciaOperacional:
+          'https://docs.google.com/spreadsheets/d/19ZBFnBBTBPInGoXyVf2ImRm4d9IUYv_h2jELR1jTKfA/pubhtml?gid=1299658999&single=true&amp;widget=true&amp;headers=false',
+        skillSet: 'https://dti-triforce.github.io/tv/.html'
+      };
 
-        (function() {
-            var i = 0;
-            var quantidadeUrls = Object.keys(urls).length;
-            setInterval(function() {
-                if (i === quantidadeUrls) {
-                    i = 0;
-                }
-                var postFix = i > 0 ? '&refresh=' + (new Date()) : '';
-                var key = Object.keys(urls)[i];
-                var src = urls[key] + postFix;
-                document.getElementById('frame').setAttribute('src', src);
-                ++i;
-            }, 10000)
-        })();
+      (function() {
+        var i = 0;
+        var quantidadeUrls = Object.keys(urls).length;
+        setInterval(function() {
+          if (i === quantidadeUrls) {
+            i = 0;
+          }
+          var postFix = i > 0 ? '&refresh=' + new Date() : '';
+          var key = Object.keys(urls)[i];
+          var src = urls[key] + postFix;
+          document.getElementById('frame').setAttribute('src', src);
+          ++i;
+        }, 10000);
+      })();
     </script>
-</head>
+  </head>
 
-<body style="overflow: hidden">
-
-<iframe id="frame" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:10px;right:0px;bottom:0px" height="100%" width="100%" align="center"></iframe>
-
-</body>
+  <body style="overflow: hidden">
+    <iframe
+      id="frame"
+      frameborder="0"
+      style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:10px;right:0px;bottom:0px"
+      height="100%"
+      width="100%"
+      align="center"
+    ></iframe>
+  </body>
+</html>
