@@ -45,20 +45,20 @@
           var key = Object.keys(urls)[i];
           var src = urls[key] + postFix;
                     
-          console.log("frame: " + a);
-          console.log("src: " + src);
+          console.log('frame: ' + a);
+          console.log('src: ' + src);
           
           if(a == 1){
-            document.getElementById('frameeee' + a).style.display = "none"; //hides the frame
+            document.getElementById('frameeee' + a).style.display = 'none'; //hides the frame
             document.getElementById('frameeee' + a).setAttribute('src', src);
             a = 2;
-            document.getElementById('frameeee' + a).style.display = "block"; //shows the frame
+            document.getElementById('frameeee' + a).style.display = 'block'; //shows the frame
           }
           else if(a == 2){
-           document.getElementById('frameeee' + a).style.display = "none"; //hides the frame
+           document.getElementById('frameeee' + a).style.display = 'none'; //hides the frame
             document.getElementById('frameeee' + a).setAttribute('src', src);
             a = 1;
-            document.getElementById('frameeee' + a).style.display = "block"; //shows the frame
+            document.getElementById('frameeee' + a).style.display = 'block'; //shows the frame
           }
           
           ++i;
