@@ -45,6 +45,9 @@
           var key = Object.keys(urls)[i];
           var src = urls[key] + postFix;
                     
+          console.log("frame: " + a);
+          console.log("src: " + src);
+          
           if(a == 1){
             document.getElementById('frame' + a).style.display = "none"; //hides the frame
             document.getElementById('frame' + a).setAttribute('src', src);
