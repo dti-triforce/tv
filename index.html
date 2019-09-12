@@ -35,7 +35,6 @@
 
       (function() {
         var i = 0;
-        var a = 1;
         var quantidadeUrls = Object.keys(urls).length;
         setInterval(function() {
           if (i === quantidadeUrls) {
@@ -44,23 +43,7 @@
           var postFix = i > 1 ? '&refresh=' + new Date() : '';
           var key = Object.keys(urls)[i];
           var src = urls[key] + postFix;
-                    
-          console.log('frame: ' + a);
-          console.log('src: ' + src);
-          
-          if(a == 1){
-            document.getElementById('frameeee' + a).style.display = 'none'; //hides the frame
-            document.getElementById('frameeee' + a).setAttribute('src', src);
-            a = 2;
-            document.getElementById('frameeee' + a).style.display = 'block'; //shows the frame
-          }
-          else if(a == 2){
-           document.getElementById('frameeee' + a).style.display = 'none'; //hides the frame
-            document.getElementById('frameeee' + a).setAttribute('src', src);
-            a = 1;
-            document.getElementById('frameeee' + a).style.display = 'block'; //shows the frame
-          }
-          
+          document.getElementById('frame').setAttribute('src', src);
           ++i;
         }, 10000);
       })();
@@ -74,15 +57,7 @@
 
   <body>
     <iframe
-      id="frameeee1"
-      frameborder="0"
-      style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:10px;right:0px;bottom:0px"
-      height="100%"
-      width="100%"
-      align="center"
-    ></iframe>
-    <iframe
-      id="frameeee2"
+      id="frame"
       frameborder="0"
       style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:10px;right:0px;bottom:0px"
       height="100%"
