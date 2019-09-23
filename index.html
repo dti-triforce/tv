@@ -31,7 +31,7 @@
           'https://docs.google.com/spreadsheets/d/e/2PACX-1vRWvFOp3fWElgJTtVNRzEBllBIZ1h2l6LEoFIjRemQ1LXZ0eBaki_XnRgsrmqAZMwcUCcJijgK9TmQc/pubhtml?gid=890090851&single=true'
       };
 
-      /*(function() {
+      (function() {
         var i = 0;
         var quantidadeUrls = Object.keys(urls).length;
         setInterval(function() {
@@ -41,19 +41,6 @@
           var postFix = i > 1 ? '&refresh=' + new Date() : '';
           var key = Object.keys(urls)[i];
           var src = urls[key] + postFix;
-          document.getElementById('frame').setAttribute('src', src);
-          ++i;
-        }, 10000);
-      })();*/
-
-      (function() {
-        var i = 0;
-        var quantidadeUrls = 34;
-        setInterval(function() {
-          if (i === quantidadeUrls) {
-            i = 0;
-          }         
-          var src = 'despedidaFelipe/' + i + '.jpeg';
           document.getElementById('frame').setAttribute('src', src);
           ++i;
         }, 10000);
